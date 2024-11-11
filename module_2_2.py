@@ -1,19 +1,12 @@
 first = input('Введите первое целое число: ')
-if first.isdigit():    
-    second = input('Введите второе целое число: ')
-    if second.isdigit:
-        third = input('Введите третье целое число: ')
-else:
+second = input('Введите второе целое число: ')
+third = input('Введите третье целое число: ')
+if not first.isdigit() or not second.isdigit() or not third.isdigit():
     print('Вы ввели не целое число!!! Попробуйте заново!')
-#if second == int(second):
-   # third = input('Введите третье целое число: ')
-
-        
-        
-     #   if third == int(third):
-            
-#else:
-  #  print('Вы ввели не целое число!')
-
-#if first == second and first == third:
-    #print('Количество одинаковых чисел:', '3')
+else:
+    if first == second and first == third:
+        print('Одинаковых чисел: 3')
+    elif first == second and first != third or second == third and second != first or first == third and first != second:
+        print('Одинаковых чисел: 2')
+    else:
+        print('Одинаковых чисел: 0')
