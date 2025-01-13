@@ -11,7 +11,7 @@ class House:
     def __str__(self):
         return f'Название: {self.name}, количество этажей: {self.number_of_floors}'
     def __del__(self):        
-        print(self.name)    
+        print(f'{self.name} снесён, но он останется в истории')    
 h1 = House('ЖК Эльбрус', 10)
 print(House.houses_history)
 h2 = House('ЖК Акация', 20)
