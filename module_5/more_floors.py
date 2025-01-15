@@ -43,17 +43,19 @@ class House:
         else:
             return print('Ошибка')        
     def __iadd__(self, value):
-        if isinstance(value, int):
-            self.number_of_floors = self.number_of_floors + value
-            return self
-        else:
-            return print('Ошибка')
+        return self.__add__(value)
+        # if isinstance(value, int):
+        #     self.number_of_floors = self.number_of_floors + value
+        #     return self
+        # else:
+        #     return print('Ошибка')
     def __radd__(self, value):
-        if isinstance(value, int):
-            self.number_of_floors = self.number_of_floors + value
-            return self
-        else:
-            return print('Ошибка')    
+        return self.__add__(value)
+        # if isinstance(value, int):
+        #     self.number_of_floors = self.number_of_floors + value
+        #     return self
+        # else:
+        #     return print('Ошибка')    
         
 h1 = House('ЖК Эльбрус', 10)
 h2 = House('ЖК Акация', 20)
