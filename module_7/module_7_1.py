@@ -13,7 +13,7 @@ class Shop():
         file.close
         return content
     def add(self, *products):
-        file = open(self.__file_name, 'r+')
+        file = open(self.__file_name, 'a+')
         content = self.get_products()
         for i in range(len(products)):
             if f'{products[i]}' in content:
